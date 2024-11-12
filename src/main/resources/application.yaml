@@ -1,0 +1,26 @@
+spring:
+  feign:
+    codec:
+      encoding: application/json
+  application:
+    name: auth-ms
+  datasource:
+    url: jdbc:postgresql://192.168.31.249:5434/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        default_schema: public2
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+    hibernate:
+      ddl-auto: update
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+server:
+  port: 8080
